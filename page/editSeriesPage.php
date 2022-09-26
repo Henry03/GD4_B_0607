@@ -17,7 +17,7 @@
     $session_id = session_id();
 
     include ('../db.php');
-    $querySelect = mysqli_query($con, "SELECT * FROM movies WHERE id=".$id);
+    $querySelect = mysqli_query($con, "SELECT * FROM series WHERE id=".$id);
     $data = mysqli_fetch_assoc($querySelect);
 
 ?>
@@ -25,11 +25,11 @@
         <body>
             <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
             <div class="body d-flex justify-content-between">
-                <h4>EDIT DATA MOVIE</h4>
-                <a href="../page/listMoviesPage.php"><i style="color: black" class="fa fa-arrow-left fa-2x"></i></a>
+                <h4>EDIT DATA SERIES</h4>
+                <a href="../page/listSeriesPage.php"><i style="color: black" class="fa fa-arrow-left fa-2x"></i></a>
             </div>
             <hr>
-                <form action="../process/editMoviesProcess.php" method="post">
+                <form action="../process/editSeriesProcess.php" method="post">
                     <input hidden="true" name="id" type="text" class="form-control" id="inputId" value="<?php echo $data['id'] ?>">
                     <div class="col-12 mb-3">
                         <label for="inputName" class="form-label">Name</label>
@@ -37,15 +37,20 @@
                     </div>
                     <div class="col-12 mb-3">
                         <label for="inputGenre" class="form-label">Genre</label>
-                        <select name="genre" class="form-select" id="inputGenre" selected="<?php echo $data['genre'] ?>">
-                            <option <?php if($data['genre']=='Action'): ?> selected="selected"<?php endif; ?> value="Action">Action</option>
-                            <option <?php if($data['genre']=='Romance'): ?> selected="selected"<?php endif; ?> value="Romance">Romance</option>
-                            <option <?php if($data['genre']=='Horror'): ?> selected="selected"<?php endif; ?> value="Horror">Horror</option>
+                        <input name="showGenre" type="text" class="form-control" id="inputGenre" value="<?php echo $data['genre'] ?>" disabled>
+                        <select name="genre[]" class="form-select" id="inputGenre" multiple>
+                            <option value="Action">Action</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Horror">Horror</option>
                         </select>
                     </div>
                     <div class="col-12 mb-3">
                         <label for="inputRelease" class="form-label">Year Release</label>
-                        <input name="release" type="text" class="form-control" id="inputRelease" value="<?php echo $data['realese'] ?>">
+                        <input name="release" type="text" class="form-control" id="inputRelease" value="<?php echo $data['realease'] ?>">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="inputEpisode" class="form-label">Episode</label>
+                        <input name="episode" type="text" class="form-control" id="inputEpisode" value="<?php echo $data['episode'] ?>">
                     </div>
                     <div class="col-12 mb-3">
                         <label for="inputSeason" class="form-label">Season</label>
