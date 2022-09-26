@@ -10,12 +10,11 @@
         $name = $_POST['name'];
         $genre = $_POST['genre'];
         $year = $_POST['year'];
-        $episode = $_POST['episode'];
         $season = $_POST['season'];
         $synopsis = $_POST['synopsis'];
     
         // Melakukan insert ke databse dengan query dibawah ini
-        $insert = mysqli_query($con, "INSERT INTO `movies` (`name`, `genre`, `realese`, `episode`, `season`, `synopsis`) VALUES ('$name', '$genre', '$year', '$episode', '$season', '$synopsis');") or die(mysqli_error($con));
+        $insert = mysqli_query($con, "INSERT INTO `movies` (`name`, `genre`, `realese`, `season`, `synopsis`) VALUES ('$name', '$genre', '$year', '$season', '$synopsis');") or die(mysqli_error($con));
     
         if($insert){
             echo

@@ -14,7 +14,6 @@
                 <th scope="col">Name</th>
                 <th scope="col">Genre</th>
                 <th scope="col">Realese</th>
-                <th scope="col">Episode</th>
                 <th scope="col">Season</th>
                 <th scope="col"></th>
             </tr>
@@ -39,7 +38,6 @@
                             <td>'.$data['name'].'</td>
                             <td>'.$data['genre'].'</td>
                             <td>'.$data['realese'].'</td>
-                            <td>'.$data['episode'].'</td>
                             <td>'.$data['season'].'</td>
                             <td>
                             <a href="../page/editMoviesPage.php?id='.$data['id'].'">

@@ -5,7 +5,6 @@
             $name = $_POST['name'];
             $genre = $_POST['genre'];
             $release = $_POST['release'];
-            $episode = $_POST['episode'];
             $season = $_POST['season'];
             $synopsis = $_POST['synopsis'];
 

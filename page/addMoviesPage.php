@@ -13,7 +13,7 @@
         <body>
             <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
             <div class="body d-flex justify-content-between">
-                <h4>ADD NEW DATA SERIES</h4>
+                <h4>ADD NEW MOVIE</h4>
                 <a href="../page/listMoviesPage.php"><i style="color: black" class="fa fa-arrow-left fa-2x"></i></a>
                 
             </div>
@@ -34,10 +34,6 @@
                     <div class="col-12 mb-3">
                         <label for="inputYear" class="form-label">Year Release</label>
                         <input name="year" type="text" class="form-control" id="inputYear">
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="inputEpisode" class="form-label">Episode</label>
-                        <input name="episode" type="text" class="form-control" id="inputEpisode">
                     </div>
                     <div class="col-12 mb-3">
                         <label for="inputSeason" class="form-label">Season</label>
