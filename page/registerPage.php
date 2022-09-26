@@ -18,7 +18,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container">
             <!-- Nama : nama panggilan kalian -->
-            <a class="navbar-brand fw-bold" href="/gd4_x_yyyy">PHP - Nama</a>
+            <a class="navbar-brand fw-bold" href="/gd4_x_yyyy">PHP - Henry</a>
         </div>
     </nav>
     <div class="bg bg-light text-dark">
